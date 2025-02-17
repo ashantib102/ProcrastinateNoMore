@@ -1,0 +1,283 @@
+/* Font Definitions */
+.jacquard-12-regular {
+    font-family: "Jacquard 12", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.press-start-2p-regular {
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Press Start 2P", serif;
+    text-align: center;
+    min-height: 100vh;
+    background-image: url('https://cdn.glitch.global/9c09baa8-4c6f-42a3-9a6d-5eb6eec1732b/a83e62f7599c5b91c6bcb05e8492ea56.png?v=1739671613485');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 1rem;
+}
+
+/* Typography */
+h1 {
+    color: white;
+    font-size: clamp(1.25rem, 4vw, 2.3rem);
+    font-family: "Press Start 2P", serif;
+    text-align: center;
+    margin: 6rem 0 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        margin-top: 2rem;
+    }
+}
+
+/* Timer */
+#timer {
+    color: white;
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin: 1.25rem auto;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Task List */
+#task-list {
+    max-width: 90%;
+    width: 300px;
+    margin: 2rem auto;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem;
+    border-bottom: 1px solid #ccc;
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+}
+
+h2{
+  color:white;
+  padding: 50px;
+}
+
+.task span {
+    flex-grow: 1;
+    margin-right: 1rem;
+}
+
+/* Flashcard Container */
+.flashcard-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .flashcard-container {
+        padding: 1rem;
+        margin-bottom: 5rem;
+    }
+}
+
+/* Flashcard */
+.flashcard {
+    color: white;
+    aspect-ratio: 3/2;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    background-color: #044af1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    perspective: 1000px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.flashcard:hover .flashcard-inner {
+    transform: rotateY(180deg);
+}
+
+.flashcard-front, .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.flashcard-front {
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+    line-height: 1.5;
+}
+
+.flashcard-back {
+    font-family: serif;
+    font-weight: bold;
+    font-size: clamp(1rem, 3vw, 1.15rem);
+    background-color: #ffdd57;
+    transform: rotateY(180deg);
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #044af1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+
+
+@media (max-width: 1024px) {
+    .navbar {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        width: 100%;
+        bottom: 0;
+        top: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0.75rem;
+    }
+    
+    body {
+        padding-bottom: 4rem;
+    }
+}
+
+/* Profile Icon */
+.profile-icon {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .profile-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0;
+    }
+    
+    .navbar img {
+        margin-bottom: 0;
+    }
+}
+
+/* Navigation Links */
+.navbar a {
+    font-size: 0.9375rem;
+    font-family: "Press Start 2P", serif;
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+/* Button Styles */
+button {
+    background-color:#044af1; /* Set the button color to black */
+    color: white; /* Set text color to white */
+    font-family: "Press Start 2P", serif; /* Apply the Press Start 2P font */
+    font-size: 1rem; /* Set a default font size */
+    border: none; /* Remove the default border */
+    padding: 0.5rem 1rem; /* Add padding */
+    border-radius: 5px; /* Optionally add rounded corners */
+    cursor: pointer; /* Change the cursor to a pointer */
+    transition: background-color 0.3s ease; /* Smooth transition for background-color */
+}
+
+button:hover {
+    background-color: #444; /* Darker shade for hover effect */
+}
+
+/* Points Display */
+.pointsDisplay {
+    font-size: 0.9375rem;
+    font-family: "Press Start 2P", serif;
+    color: white;
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .navbar a,
+    .pointsDisplay {
+        padding: 0.5rem;
+        font-size: 0.75rem;
+        width: auto;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+    .flashcard-inner {
+        transition: transform 0.4s ease;
+    }
+    
+    .flashcard:active .flashcard-inner {
+        transform: rotateY(180deg);
+    }
+}

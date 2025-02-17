@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Press+Start+2P&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="pomodoro.css" />
+</head>
+<body>
+  
+   <nav class="navbar" id="navbar">
+         <a href="index.html"><img src="https://cdn.glitch.global/9c09baa8-4c6f-42a3-9a6d-5eb6eec1732b/DALL%C2%B7E%202025-02-15%2020.25.40%20-%20A%20black%20and%20white%20logo%20representing%20a%20theme%20of%20productivity%2C%20games%2C%20and%20fighting%20procrastination.%20The%20logo%20should%20incorporate%20elements%20such%20as%20a%20clock.webp?v=1739669160869" alt="Profile Icon" class="profile-icon"></a>
+        <a href="">Level up your productivity and earn cool rewards for tasks!</a>
+        <a href="profile.html">Profile</a>
+        <a href=""> <div id="pointsDisplay">Points: 0</div></a>
+        <a href="rewards.html">Rewards</a>
+        <a href="accountability.html">Accountability</a>
+      </nav>
+
+
+    
+    <h1>Pomodoro Timer</h1>
+  
+  
+    <div class="flashcard-container">
+        <div class="flashcard">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">Improved Focus</div>
+                <div class="flashcard-back">By working in short bursts, you train your brain to concentrate intensely for brief periods.</div>
+            </div>
+        </div>
+        <div class="flashcard">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">Reduced Burnout</div>
+                <div class="flashcard-back">Regular breaks prevent mental fatigue and keep you fresh throughout the day.</div>
+            </div>
+        </div>
+        <div class="flashcard">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">Better Time Management</div>
+                <div class="flashcard-back">You become more aware of how long tasks actually take.</div>
+            </div>
+        </div>
+        <div class="flashcard">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">Increased Accountability</div>
+                <div class="flashcard-back">The timer creates a sense of urgency and helps you stay on track.</div>
+            </div>
+        </div>
+        <div class="flashcard">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">Enhanced Motivation</div>
+                <div class="flashcard-back">Breaking big projects into smaller chunks makes them feel more manageable.</div>
+            </div>
+        </div>
+    </div>
+  
+    <div id="timer">25:00</div>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="resetTimer()">Reset</button>
+    <button onclick="setShortBreak()">Short Break</button>
+    <button onclick="setLongBreak()">Long Break</button>
+    
+    <h2>Tasks</h2>
+    <input type="text" id="task-input" placeholder="New task">
+    <input type="number" id="task-time" placeholder="Time in min" min="1">
+    <button onclick="addTask()">Add</button>
+    <div id="task-list"></div>
+
+    
+</body>
+<script src="pomodoro.js"></script>
+</html>

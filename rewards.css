@@ -1,0 +1,296 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    min-height: 100vh;
+    background-image: url('https://cdn.glitch.global/9c09baa8-4c6f-42a3-9a6d-5eb6eec1732b/a83e62f7599c5b91c6bcb05e8492ea56.png?v=1739671613485');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #044af1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        width: 100%;
+        bottom: 0;
+        top: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0.75rem;
+    }
+}
+
+/* Profile Icon */
+.profile-icon {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .profile-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0;
+    }
+    
+    .navbar img {
+        margin-bottom: 0;
+    }
+}
+
+/* Navigation Links */
+.navbar a {
+    font-size: 0.9375rem;
+    font-family: "Press Start 2P", serif;
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    transform: translateY(-2px);
+}
+
+/* Points Display */
+.pointsDisplay {
+    font-size: 0.9375rem;
+    font-family: "Press Start 2P", serif;
+    color: white;
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .navbar a,
+    .pointsDisplay {
+        padding: 0.5rem;
+        font-size: 0.75rem;
+        width: auto;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+    .Journal:active,
+    .Timer:active,
+    .navbar a:active {
+        transform: translateY(0);
+    }
+}
+
+/* High-DPI Screen Optimizations */
+@media (min-resolution: 192dpi) {
+    .slideshow-container {
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+    }
+}
+
+/* Main Container */
+.rewards-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+/* Rewards Box */
+.rewards-box {
+    background-color: rgba(0, 0, 255, 0.6);
+    padding: clamp(1.5rem, 5vw, 2.5rem);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .rewards-box {
+        width: 95%;
+        padding: 1.25rem;
+    }
+}
+
+/* Typography */
+.rewards-box h1 {
+    font-size: clamp(1.25rem, 4vw, 2rem);
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.rewards-box h2 {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.rewards-box p {
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Button Container and Buttons */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.button-container a {
+    text-decoration: none;
+}
+
+button {
+    padding: 0.75rem 1.25rem;
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    font-family: 'Press Start 2P', sans-serif;
+    cursor: pointer;
+    background-color: #000;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: white;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    button {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* Rewards List */
+.rewards-list {
+    margin: 2rem 0;
+}
+
+.rewards-list ul {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.rewards-list li {
+    color: white;
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+    line-height: 1.6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Rewards Images Container */
+.rewards-images {
+    background-color: rgba(0, 0, 255, 0.3);
+    padding: clamp(1rem, 3vw, 1.5rem);
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+}
+
+/* Image Responsiveness */
+.rewards-images img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+}
+
+/* Tablet Adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .rewards-box {
+        width: 80%;
+    }
+    
+    .rewards-list ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop Adjustments */
+@media (min-width: 1025px) {
+    .rewards-box {
+        width: 70%;
+    }
+    
+    .rewards-list ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* High-DPI Screen Optimizations */
+@media (min-resolution: 192dpi) {
+    .rewards-box {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    }
+    
+    .rewards-box h1,
+    .rewards-box h2,
+    .rewards-box p,
+    .rewards-list li {
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    }
+}

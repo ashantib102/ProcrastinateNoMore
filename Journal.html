@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal</title>
+    <link rel="stylesheet" href="Journal.css" />
+    <!-- Google Fonts for Press Start 2P -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+   <nav class="navbar" id="navbar">
+         <a href="index.html"><img src="https://cdn.glitch.global/9c09baa8-4c6f-42a3-9a6d-5eb6eec1732b/DALL%C2%B7E%202025-02-15%2020.25.40%20-%20A%20black%20and%20white%20logo%20representing%20a%20theme%20of%20productivity%2C%20games%2C%20and%20fighting%20procrastination.%20The%20logo%20should%20incorporate%20elements%20such%20as%20a%20clock.webp?v=1739669160869" alt="Profile Icon" class="profile-icon"></a>
+        <a href="">Level up your productivity and earn cool rewards for tasks!</a>
+        <a href="profile.html">Profile</a>
+        <a href=""> <div id="pointsDisplay">Points: 0</div></a>
+        <a href="rewards.html">Rewards</a>
+        <a href="accountability.html">Accountability</a>
+      </nav>
+
+
+    <div class="container">
+        <h1>My Journal</h1>
+        
+        <!-- Back Button
+        <button onclick="window.location.href='index.html'">Back to Homepage</button>-->
+        
+        <div class="journal-entry-container">
+            <!-- Journal Entry Form -->
+            <div class="journal-input">
+                <textarea id="entry" placeholder="Write your journal entry here..."></textarea>
+                <br>
+                <button onclick="saveEntry()">Save Entry</button>
+            </div>
+
+            <!-- Saved Journal Entry Display -->
+            <div class="saved-entry">
+                <h2>Saved Entries</h2>
+                <p id="savedEntryDisplay">No saved entry yet.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="Journal.js"></script>
+</body>
+</html>

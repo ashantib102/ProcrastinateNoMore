@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url('https://cdn.glitch.global/9c09baa8-4c6f-42a3-9a6d-5eb6eec1732b/a83e62f7599c5b91c6bcb05e8492ea56.png?v=1739671613485');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.profile-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    font-family: "Press Start 2P", serif; /* Changed to Press Start 2P */
+    color: #044af1; /* Text color */
+}
+
+.avatar {
+    font-size: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #eeeeee;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+    background-color: #dddddd;
+}
+
+.home-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.home-button:hover {
+    background: #0056b3;
+}
+
+h2 {
+    font-family: "Press Start 2P", serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #044af1;
+}
+
+p {
+    font-family: "Press Start 2P", serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #044af1;
+}
+
+input[type="text"] {
+    font-family: "Press Start 2P", serif;
+    font-size: 1.2rem;
+    padding: 10px;
+    width: 80%;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 2px solid #044af1;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.username {
+    color: #008cba; /* Blue text for username */
+}
+
+.navbar {
+    background-color: #044af1 ;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 35px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 200px;
+}
+
+.navbar img{
+  margin-bottom:50px;
+}
+.profile-icon {
+    border-radius: 50%;
+    width: 200px;  /* Set desired image width */
+    height: auto;
+    margin-bottom: 5px;  /* Adjust spacing between the image and text */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar a {
+    font-size: 15px;
+    font-family: "Press Start 2P", serif;
+    color: white;
+    text-decoration: none;
+    padding: 15px 10px 30px 10px ;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.pointsDisplay{
+    font-size: 15px;
+    font-family: "Press Start 2P", serif;
+    color: white;
+    text-decoration: none;
+    padding: 15px 10px 30px 10px ;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
